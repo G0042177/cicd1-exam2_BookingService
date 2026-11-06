@@ -8,7 +8,7 @@ import lombok.Setter;
 import java.math.BigDecimal;
 
 @Entity
-@Table (name= " Booking")
+@Table (name= " booking")
 @NoArgsConstructor
     public class Booking {
         @Id @GeneratedValue (strategy = GenerationType.IDENTITY)

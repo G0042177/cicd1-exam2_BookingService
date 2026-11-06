@@ -1,12 +1,14 @@
 package ie.atu.sample.dto;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
 
 
 public class CreateBookingRequest {
     @NotBlank private String name;
-    @NotBlank private Long bookingId;
+    @NotNull @Positive Long bookingId;
     @NotBlank private String status;
-    @NotBlank private Long count;
+    @NotNull @Positive  private Long count;
 
 }
