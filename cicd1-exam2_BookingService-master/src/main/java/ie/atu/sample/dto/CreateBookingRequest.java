@@ -1,8 +1,7 @@
 package ie.atu.sample.dto;
 
 import jakarta.validation.constraints.NotBlank;
-import lombok.Getter;
-import lombok.Setter;
+
 
 public class CreateBookingRequest {
     @NotBlank private String name;
