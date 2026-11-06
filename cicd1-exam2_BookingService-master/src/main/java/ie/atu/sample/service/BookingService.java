@@ -19,7 +19,10 @@ public class BookingService {
         return bookingRepository.findAll();
     }
     public Booking get(Long id) {
-        return bookingRepository.getReferenceById(id);
+        return bookingRepository.findById(id).orElseThrow(() ->
+                new ResponseStatusException(
+                        HttpStatus.NOT_FOUND, "Booking not found"));
+
     }
     public Booking create(Booking booking) {
         booking.setId(null);
